@@ -1,0 +1,42 @@
+    1  ps xaf
+    2  ps xawf -eo pid,user,cgroup,args
+    3  systemd-cgls
+    4  ls -l /usr/lib/systemd/system/
+    5  ls -l /run/systemd/system/
+    6  ls -l /etc/systemd/system/
+    7  systemctl -t help
+    8  sysctemctl status
+    9  systemctl status
+   10  systemctl --type=service
+   11  systemctl status auditd.service 
+   12  systemctl is-active auditd.service 
+   13  systemctl is-enable auditd.service 
+   14  systemctl is-enabled auditd.service 
+   15  systemctl list-dependencies --after auditd.service 
+   16  systemctl list-units --type=service
+   17  systemctl list-units --type=service --all
+   18  systemctl list-units --type=socket --all
+   19  systemctl list-unit-files --type=service 
+   20  systemctl --failed --type=service 
+   21  systemctl status httpd.service 
+   22  systemctl start httpd.service 
+   23  systemctl status httpd.service 
+   24  systemctl restart httpd.service 
+   25  systemctl status httpd.service 
+   26  systemctl stop httpd.service 
+   27  sudo systemctl enable httpd.service 
+   28  sudo systemctl status httpd.service 
+   29  sudo systemctl start httpd.service 
+   30  sudo systemctl status httpd.service 
+   31  sudo systemctl disable httpd.service 
+   32  sudo systemctl status httpd.service 
+   33  sudo systemctl mask httpd.service 
+   34  sudo systemctl status httpd.service 
+   35  sudo systemctl unmask httpd.service 
+   36  systemctl list-units --type=target
+   37  systemctl list-units --type=target --all
+   38  systemctl get-default
+   39  ls -l /etc/systemd/system/default.target
+   40  systemctl set-default multi-user.target
+   41  systemctl isolate multi-user.target
+   42  history > lab9_history.txt
